@@ -1,8 +1,8 @@
 "use client";
 
 import useCart from "@/app/hooks/useCart";
-import SkeletonLoader from "../skeletonLoader";
 import { ShoppingCart } from "lucide-react";
+import SkeletonCartLoader from "../skeletonCartLoader";
 
 export default function NavBar() {
   const { data: cart, isLoading } = useCart();
@@ -19,7 +19,7 @@ export default function NavBar() {
             {count}
           </span>
         ) : (
-          <SkeletonLoader />
+          <SkeletonCartLoader />
         )}
       </div>
     </div>
