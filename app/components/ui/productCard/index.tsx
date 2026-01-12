@@ -31,7 +31,7 @@ export default function ProductCard({ product }: { product: Product }) {
         width={200}
         height={200}
         alt={product.title}
-        className=""
+        className="w-100"
       />
       <div className="font-semibold">{product.title}</div>
       <div className="text-sm">₹{product.price}</div>
