@@ -15,8 +15,6 @@ const getKey: SWRInfiniteKeyLoader = (pageIndex, previousPageData: Response | nu
 };
 
 export default function useProducts() {
-  const swr = useSWRInfinite<Response>(getKey, getProducts, {
-    revalidateFirstPage: false,
-  });
+  const swr = useSWRInfinite<Response>(getKey, getProducts);
   return { ...swr, LIMIT };
 }

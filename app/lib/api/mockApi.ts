@@ -14,7 +14,6 @@ const sleep = (ms: number) => new Promise((res) => setTimeout(res, ms));
 const CART: Cart = { items: {} };
 
 export const getProducts = async (url: string) => {
-  await sleep(4000);
   const res = await fetch(`https://dummyjson.com/${url}`);
   return await res.json();
 };
